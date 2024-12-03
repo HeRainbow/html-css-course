@@ -1,0 +1,183 @@
+.header{
+  height: 55px;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  /* justify-content用在父容器上，控制子元素在主轴上的排列方式。 */
+  /* justify-items用在 网格容器或子元素上，控制网格项（grid items）内部内容的对齐方式。 */
+  justify-content: space-between;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(203, 203, 203);
+  /* z-index相当于页面实现的优先级，数字越高优先级越高 */
+  z-index: 100;
+}
+.left-section{
+  display: flex;
+  align-items: center;
+
+}
+
+.hamburger-menu{
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 20px;
+}
+.youtube-logo{
+  height: 20px;
+}
+.middle-section{
+
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.Search-bar{ 
+  flex: 1;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  /* border-width: 1px;
+  border-style: solid;
+  border-color: rgb(175, 173, 173); */
+
+  border: 1px solid rgb(175, 173, 173);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
+  /* box-sizing 确保padding和border在总高度内,以避免出现缩放不一致情况 */
+  box-sizing: border-box; 
+  /* width设置为0，可以使Search-bar缩小 */
+  width: 0;
+}
+.Search-bar::placeholder{
+
+  font-size: 16px;
+}
+.search-button{
+  height: 40px;
+  width: 66px;
+  background-color: rgb(240,240,240);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(175, 173, 173);
+  margin-left: -1px;
+  margin-right: 10px;
+}
+
+.search-button ,.voice-search-button, .upload-icon-continer
+,.youtube-apps-icon-continer, .notifications-icon-container
+{
+  display: flex;
+  /*  flex-direction默认值为row */
+  flex-direction: row;
+  /* 水平居中 */
+  justify-content: center;
+  /* 垂直居中 */
+  align-items: center;
+  position: relative;
+}
+
+/* 可以使用“.search-button .tooltip”来选定Search-button中的tooltip */
+/* 使用这种高级CSS选择器可以节省大量的带代码 */
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-continer .tooltip,
+.youtube-apps-icon-continer .tooltip,
+.notifications-icon-container .tooltip
+{
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+
+  /* 当鼠标悬停在tooltip上面时，不会触发hover */
+  pointer-events: none;
+
+  /* white-space: nowrap; 是一个 CSS 属性，用来控制元素中文本的空白符处理和换行行为。
+当设置为 nowrap 时：
+文本不换行：所有文本将显示在同一行，直到遇到强制换行符（如 <br>）。
+忽略空白和换行符：HTML 源代码中的多余空格和换行符将被忽略。
+ */
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-continer:hover .tooltip,
+.youtube-apps-icon-continer:hover .tooltip,
+.notifications-icon-container:hover .tooltip
+{
+  opacity: 1;
+
+}
+.search-icon{
+  height: 25px;
+
+}
+
+.voice-search-button{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(240, 240, 240);
+}
+.voice-search-icon{
+  height: 24px;
+
+} 
+
+.right-section{
+  width: 180px;
+  margin-right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* 防止图标因缩小而挤在一起 */
+  flex-shrink: 0;
+}
+.upload-icon{
+  height: 24px;
+}
+.youtube-apps-icon{
+  height: 24px;
+}
+.notifications-icon{
+  height: 24px;
+}
+.notifications-icon-container{
+  position: relative;
+}
+.notifications-count{
+  font-size: 12px;
+  position: absolute;
+  top: -2px;
+  right: -10px;
+  background-color: rgb(231, 12, 12);
+  color: white;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 20px;
+}
+.current-user-picture{
+  height: 32px;
+  border-radius: 16px;
+}

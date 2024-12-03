@@ -1,0 +1,30 @@
+
+.views {
+  display: flex;
+  flex-direction: row;
+  justify-content: start; /* 左右分布，part3 移到右侧 */
+  align-items: center;
+  border: 1px solid gray;
+  padding: 10px; /* 为了增加视图内边距，可以选择性设置 */
+}
+
+.pic {
+  background-color: lightpink;
+}
+
+.headshot {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 60px;
+}
+
+.intro {
+  margin-left: 15px;
+  flex: 1;
+  background-color: lightblue;
+}
+
+.part3 {
+  background-color: lightpink;
+}

@@ -1,0 +1,47 @@
+p{
+  margin: 0;
+}
+.view{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.left-section{
+  width: 60px;
+}
+.right-section{
+  width: 500px
+
+}
+.header-pic{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.Name{
+  font-weight: bold;
+}
+.Name-suffix,.intro-section-row1{
+  color: rgb(128, 127, 127);
+}
+
+.row2{
+  display: flex;
+  border-style: solid;
+  border-width: 1px ;
+  border-color: rgb(201, 201, 201);
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  /* 解决溢出问题 */
+  overflow: hidden;
+}
+.thumbnail{
+  width: 60px;
+  background-color: rgb(220, 220, 220);
+}
+.intro-section{
+  flex: 1;
+  background-color: white;
+  padding-left: 8px;
+}

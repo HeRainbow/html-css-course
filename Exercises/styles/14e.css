@@ -1,0 +1,49 @@
+body{
+  margin-bottom: 3000px;
+}
+p{
+  margin: 0;
+}
+.header-bar{
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  background-color: lightblue;
+}
+.views{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+
+
+  align-items: center;
+}
+.head-pic{
+  margin-left: 50px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+.Name{
+  flex: 1;
+  margin-left: 8px;
+  font-weight: bold;
+}
+.right-section{
+  margin-right: 80px;
+}
+.add-friend-button,.Message-button{
+  border: none;
+  border-radius: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.add-friend-button{
+  color: white;
+  background-color: rgb(39, 80, 214);
+}

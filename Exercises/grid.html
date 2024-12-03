@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Grid Practice
+    </title>
+  </head>
+  <body >
+    <!-- grid的内部，仍然可以使用block，inline-block来实现不同行的合并以及区分 -->
+     <div style="
+      display: grid;
+      grid-template-columns: 100px 100px;
+      ">
+      <div style="background-color: lightblue;"><p>div1</p></div>
+      <div style="background-color: lightpink;"><p style="display:inline-block">div2</p><p style="display: inline-block;">text</p></div>
+    </div>
+
+    <div style="
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 100px 100px 200px;
+      ">
+      <div style="background-color: lightblue;">div1</div>
+      <div style="background-color: lightpink;">div2<p>text</p></div>
+      <div style="background-color: lightblue;">div3</div>
+      <div style="background-color: lightblue;">div1</div>
+    </div>
+
+
+
+    <div style="
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 100px 1fr 2fr;
+      ">
+      <div style="background-color: lightblue;">div1</div>
+      <div style="background-color: lightpink;">div2<p></p></div>
+      <div style="background-color: lightblue;">div2<p></p></div>
+      
+    </div>
+
+<!-- 
+ 在使用inline-block时，会导致不同区域之间产生空隙，
+ 可以使用Grid来解决此问题
+  -->
+      <div style="
+      margin-top: 30px;
+      display: grid;
+      /* 设置有几列 */
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 40px;
+      ">
+      <div style="background-color: lightblue; height: 200px;">div1</div>
+      <div style="background-color: lightpink;">div2</div>
+      <div style="background-color: lightblue;">div2</div>
+      <div style="background-color: lightpink;">div2</div>
+      <div style="background-color: lightblue; height: 200px;">div1</div>
+      <div style="background-color: lightpink;">div2</div>
+    </div>
+  </body>
+</html>

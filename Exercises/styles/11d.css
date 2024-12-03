@@ -1,0 +1,83 @@
+.bigpic{
+  width: 100%;
+  height: 300px;
+  /* 裁剪超出范围的图片 */
+  object-fit: cover;
+  object-position: center;
+}
+p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.id-card{
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.Name{
+  font-size: 25px;
+  margin-left: 8px;
+  font-weight: bold;
+}
+.des{
+  font-size: 20px;
+  margin-left: 8px;
+  color: rgb(96,96,96);
+}
+button{
+  border: none;
+  font-size: 20px;
+  margin-left: 8px;
+  margin-top: 10px;
+  color: white;
+  border-radius: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(27, 83, 235, 0.719);
+}
+button:hover{
+  cursor: pointer;
+  background-color: rgba(27, 78, 218, 0.719);
+}
+.thumbnail-row{
+  margin-left: 10px;
+  margin-bottom: 0px;
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  align-items: center;
+}
+.thumbnail{
+  width: 35px;
+  height: 35px;
+
+  vertical-align: middle;
+}
+.thumbnail-pic{
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 60px;
+
+}
+.mutual-friends{
+
+  vertical-align: middle;
+  width: 160px;
+}
+.des{
+  font-size: 16px;
+  width: 160px;
+}
+.info{
+  height: 130px;
+}
+.id-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  align-items: center;
+}

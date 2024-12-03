@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Position practice</title>
+  </head>
+  <body style="
+    height: 20000px;
+    padding-top: 70px;
+    padding-left: 80px;
+  ;">
+  <!-- 想要给页面顶部略出一段空间，则在body内设置一个padding-top -->
+    <div style="
+      background-color: black;
+      color: white;
+
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      height: 60px;
+      z-index: 1;
+      ">header</div>
+      
+      <!-- 
+      position有四个特殊属性来移动header标签：
+      1.top：header距离浏览器顶部多远，
+      2.left：header距离浏览器左边有多远，
+      3.bottom
+      4.right
+      设置相反方向的时候，header会被拉伸
+      -->
+    <div style="
+      background-color: green;
+      color: white;
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      top: 60px;
+      width: 72px;
+    ;">
+    <!-- absolute极其实用的一个用法：
+     放在其他div内,且该div设置了position：relative， 则它的相对位置变为div的范围内，而非原来的page
+
+     sidebar 本身使用了 position: fixed，这意味着它已经固定在视口范围中，
+     不依赖父级元素的位置。
+     而 sidebar 内部的 position: absolute 子元素会直接把 sidebar 视为定位上下文，
+     因为 position: fixed 元素可以成为绝对定位子元素的参考点。
+     -->
+      sidebar
+      <div style="
+      position: absolute;
+      background-color: red;
+      color: white;
+      top: 0px;
+      right: 0px;
+    ;">
+      X
+
+    </div>
+
+    </div>
+     <!-- fixed和absolute的区别：fixed中的元素放在borwser window中，
+      而absolute中的元素放置在page中 
+      
+      z-index相当于页面实现的优先级，数字越高优先级越高
+      -->
+    <div style="
+      position: absolute;
+      background-color: red;
+      color: white;
+      top: 60px;
+      right: 10px;
+      z-index: 0;
+    ;">
+      absolute
+    </div>
+
+    <div style="
+      background-color: lightblue;
+      height: 200px;
+      width: 200px;
+      ;">div 1</div>
+
+      <!-- relative和absolute结合使用，能实现  -->
+    <div style="
+      background-color: lightpink;
+      height: 200px;
+      width: 200px;    
+      position: relative;
+
+    ;">div 2
+      <div style="
+      position: absolute;
+      background-color: black;
+      color: white;
+      top: 60px;
+      right: 10px;
+      z-index: 0;
+    ;">
+      absolute
+    </div>  
+  
+  </div>
+  </body>
+</html>

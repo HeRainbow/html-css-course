@@ -1,0 +1,53 @@
+p{
+  margin: 0;
+  font-size: 16px;
+}
+.view{
+  border-width: 1px;
+  border-color: gray;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding-bottom: 20px;
+}
+.row1{
+  display: block;
+
+}
+.ALL-INBOXES{
+  display: flex;
+  font-size: 16px;
+  color: rgb(76, 76, 76);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+}
+.row2{
+  margin-top: 20px;
+  display: flex;
+
+}
+.right-section{
+  flex: 1;
+}
+.header-pic{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.Name-section{
+  display: flex;
+  justify-content: space-between;
+}
+.Name, .intro-section-row1{
+  font-weight: bold;
+}
+.intro-section-row2,.time{
+  color: rgb(76,76,76);
+}
+.time{
+  margin-right: 10px;
+}

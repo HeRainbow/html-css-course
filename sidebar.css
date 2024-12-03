@@ -1,0 +1,33 @@
+.sidebar{
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  top: 55px;
+  background-color: white;
+  width: 72px;
+  z-index: 200;
+  padding-top: 5px;
+}
+.sidebar-link{
+  /* 垂直、水平居中的最好办法是使用flex
+  然后调用 align-items: center;（ flex-direction: row;情况下为垂直居中）
+  justify-content: center;（水平居中）
+   */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 74px;
+}
+.sidebar-link:hover{
+  background-color: rgb(235, 235, 235);
+  cursor: pointer;
+}
+.sidebar-link img{
+  height: 24px;
+  margin-bottom: 6px;
+}
+.sidebar-link div{
+
+  font-size: 10px;
+}
